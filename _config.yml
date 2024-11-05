@@ -1,0 +1,22 @@
+title: Fluppisoft
+email: info@fluppisoft.com
+description: >-
+  Fluppisoft is a game developer based in Germany.
+baseurl: ""
+url: "https://fluppisoft.com"
+
+twitter_username: "fluppisoft"
+instagram_username: "fluppisoft"
+youtube_username: "lukasrustemeyer"
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+
+minima:
+  skin: dark
+    
+header_pages:
+  - brick-rigs.markdown
+  - imprint.markdown
