@@ -1,13 +1,11 @@
-title: Fluppisoft
-email: info@fluppisoft.com
+title: Fluppisoft Development Blog
 description: >-
   Fluppisoft is a game developer based in Germany.
 baseurl: ""
-url: "https://fluppisoft.com"
+url: "https://blog.fluppisoft.com"
 
 twitter_username: "fluppisoft"
 instagram_username: "fluppisoft"
-youtube_username: "lukasrustemeyer"
 
 theme: minima
 
@@ -15,8 +13,8 @@ plugins:
   - jekyll-feed
 
 minima:
-  skin: dark
-    
+  skin: auto
+  
 header_pages:
-  - brick-rigs.markdown
+  - index.markdown
   - imprint.markdown
