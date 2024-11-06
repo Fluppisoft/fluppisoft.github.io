@@ -18,3 +18,5 @@ minima:
 header_pages:
   - index.markdown
   - imprint.markdown
+    
+permalink: /:categories/:title/
