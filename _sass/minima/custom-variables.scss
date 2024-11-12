@@ -1,0 +1,27 @@
+// Default variables
+
+$base-font-weight: 500;
+
+$brand-color: #c668dc;
+$brand-color-light: #ececec;
+$brand-color-dark: #68356a;
+
+$text-color: #d1b7dc;
+$title-color: $brand-color-light;
+$site-title-color: $title-color;
+$link-base-color: $title-color;
+$background-color: #650e74;
+
+$border-color-01: $brand-color-light;
+$border-color-02: $border-color-01;
+$border-color-03: $border-color-01;
+
+// Custom variables
+
+$widget-color: $brand-color-dark;
+$widget-border-color: $brand-color;
+
+$button-color: $background-color;
+$button-border-color: $brand-color-light;
+$button-hover-color: $button-color;
+$button-text-color: $brand-color-light;

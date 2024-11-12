@@ -1,0 +1,37 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col-1">
+        <div class="footer-heading">
+          {{ site.title | escape }}
+        </div>
+        <div class="footer-description">
+          <p>{{ site.description | escape }}</p>
+        </div>
+      </div>
+
+      <div class="footer-col-2">
+        <div class="footer-heading">
+          Social Media
+        </div>
+        {%- include social.html -%}
+      </div>
+
+      <div class="footer-col-3">
+        <div class="footer-heading">
+          Navigation
+        </div>
+        {%- for path in page_paths -%}
+        {%- assign my_page = site.pages | where: "path", path | first -%}
+        {%- if my_page.title -%}
+        <a class="footer-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+  </div>
+
+</footer>

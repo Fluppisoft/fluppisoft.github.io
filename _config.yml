@@ -1,11 +1,8 @@
-title: Fluppisoft Development Blog
+title: Fluppisoft
 description: >-
-  Fluppisoft is a game developer based in Germany.
+  Welcome to Fluppisoft, a game developer from Bavaria.
 baseurl: ""
-url: "https://blog.fluppisoft.com"
-
-twitter_username: "fluppisoft"
-instagram_username: "fluppisoft"
+url: "https://fluppisoft.com"
 
 theme: minima
 
@@ -13,10 +10,16 @@ plugins:
   - jekyll-feed
 
 minima:
-  skin: auto
+  skin: dark
+  social_links:
+    - { platform: instagram, title: Instagram,  user_url: "https://instagram.fluppisoft.com/" }
+    - { platform: twitter, title: Twitter, user_url: "https://twitter.fluppisoft.com/" }
+    - { platform: youtube, title: Youtube,  user_url: "https://youtube.fluppisoft.com/" }
   
 header_pages:
   - index.markdown
+  - brick-rigs.markdown
+  - blog.markdown
   - imprint.markdown
     
-permalink: /:categories/:title/
+permalink: /blog/:title/

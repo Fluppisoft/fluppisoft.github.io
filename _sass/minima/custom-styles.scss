@@ -1,0 +1,157 @@
+// Minima styles
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Montserrat', sans-serif, Arial, sans-serif;
+}
+
+.site-header {
+  border-top: none;
+}
+
+.site-title {
+  font-weight: normal;
+}
+
+.site-nav {
+  .page-link {
+    color: $link-base-color;
+  }
+}
+
+.site-icon {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.svg-icon {
+  color: $text-color;
+}
+
+.footer-col-wrapper {
+  gap: 20px;
+}
+
+.footer-heading {
+  font-size: 1em !important;
+  font-weight: bold;
+  color: $title-color;
+  margin-bottom: 10px;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+  flex: 1 1 25%;
+  horiz-align: left;
+  margin-bottom: 30px;
+}
+
+.footer-col-1 {
+  flex: 1 1 50%;
+}
+
+.post-meta {
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $title-color;
+  font-weight: bold;
+  font-size: 1em !important;
+}
+
+h1 {
+  font-size: 1.5em !important;
+}
+
+h2 {
+  font-size: 1.25em !important;
+}
+
+.post-content h1 {
+  @include relative-font-size(5);
+
+  @media screen and (min-width: $on-large) {
+    @include relative-font-size(5);
+  }
+}
+
+// Custom styles
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  border: 2px solid $widget-border-color;
+  background-color: $widget-color;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.widget-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.widget-text {
+  margin: 15px 0;
+  text-align: center;
+  font-size: 1em;
+  color: $text-color;
+}
+
+.widget-button {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: $button-text-color;
+  background-color: $button-color;
+  border-radius: 5px;
+  border: 2px solid $button-border-color;
+  font-weight: bold;
+  text-align: center;
+}
+
+.widget-button:hover {
+  background-color: $button-hover-color;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+
+.social-container {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  @extend .svg-icon;
+  color: $link-base-color;
+  margin-right: 5px;
+}
+
+.footer-link {
+  display: flex;
+  gap: 10px;
+  color: $link-base-color;
+}
+
+.footer-description {
+  color: $text-color;
+}

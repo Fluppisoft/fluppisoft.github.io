@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Scalable Flaps
+title:  "Scalable Flaps - Brick Rigs Dev Blog #1"
 date:   2024-11-04 09:00:00 +0100
 category: brick-rigs
 ---
@@ -37,7 +37,6 @@ If we now replace our sine function with a scalar material parameter, we can set
 Another issue with scalable flaps was going to be the hinge part. The way scalables are implemented, their static mesh is simply proportionally scaled in the X, Y and Z directions. While this works for boxes, wedges, spheres etc., it distorts the hinge of our flap and looks bad.
 
 ![](/assets/scalable-flaps/hinge-stretching.gif)
-*Hinge getting out of proportion when the mesh is scaled.*
 
 I already knew the solution to this, as it would be very similar to the way it works on scalable wheels. We can use world position offset to customize the position of the hinge vertices and thus apply our own scaling to them. Basically, we want to remove the X scaling on the hinge vertices and apply the Z scaling instead (so the hinge is scaled equally in X and Z direction and thus remains proportional). Here is what that looks like in the material editor:
 
