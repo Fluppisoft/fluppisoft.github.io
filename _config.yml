@@ -12,9 +12,9 @@ plugins:
 minima:
   skin: dark
   social_links:
-    - { platform: instagram, title: Instagram,  user_url: "http://instagram.fluppisoft.com/" }
-    - { platform: twitter, title: Twitter, user_url: "http://twitter.fluppisoft.com/" }
-    - { platform: youtube, title: Youtube,  user_url: "http://youtube.fluppisoft.com/" }
+    - { platform: instagram, title: Instagram,  user_url: "https://instagram.fluppisoft.com/" }
+    - { platform: twitter, title: Twitter, user_url: "https://twitter.fluppisoft.com/" }
+    - { platform: youtube, title: Youtube,  user_url: "https://youtube.fluppisoft.com/" }
   
 header_pages:
   - index.markdown
