@@ -6,20 +6,25 @@ permalink: /imprint/
 
 ## Angaben gemäß § 5 TMG
 
-### Anschrift:
-Lukas Rustemeyer\
-Hammerbach 6\
-83229 Aschau\
-Deutschland
+### Firma:
+Fluppisoft GmbH (in Gründung)
 
-### Umsatzsteuer-ID:
-DE306527709
+### Anschrift:
+Hauptstraße 2B\
+85579 Neubiberg\
+Deutschland
 
 ### Vertreten durch:
 Lukas Rustemeyer
 
 ### Kontakt:
 E-Mail: info@fluppisoft.com
+
+### Handelsregister:
+Die Gesellschaft befindet sich in der Gründungsphase und ist noch nicht ins Handelsregister eingetragen. Die Eintragung ins Handelsregister erfolgt unter dem Namen Fluppisoft GmbH.
+
+### Umsatzsteuer-ID:
+Umsatzsteuer-ID noch nicht zugeteilt, GmbH in Gründung
 
 ### Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
 Lukas Rustemeyer
