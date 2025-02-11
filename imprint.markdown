@@ -7,7 +7,7 @@ permalink: /imprint/
 # Angaben gemäß § 5 TMG
 
 ## Firma:
-Fluppisoft GmbH (in Gründung)
+Fluppisoft GmbH
 
 ## Anschrift:
 Hauptstraße 2B\
@@ -21,10 +21,10 @@ Lukas Rustemeyer
 E-Mail: info@fluppisoft.com
 
 ## Handelsregister:
-Die Gesellschaft befindet sich in der Gründungsphase und ist noch nicht ins Handelsregister eingetragen. Die Eintragung ins Handelsregister erfolgt unter dem Namen Fluppisoft GmbH.
+Amtsgericht München HRB 299447
 
 ## Umsatzsteuer-ID:
-Umsatzsteuer-ID noch nicht zugeteilt, GmbH in Gründung
+Umsatzsteuer-ID noch nicht zugeteilt
 
 ## Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
 Lukas Rustemeyer
