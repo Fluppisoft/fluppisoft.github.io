@@ -15,8 +15,8 @@ Deutschland
 Lukas Rustemeyer
 
 **Kontakt:**  
-E-Mail: [info@fluppisoft.com](info@fluppisoft.com)  
-Webseite: [www.fluppisoft.com](www.fluppisoft.com)
+E-Mail: [info@fluppisoft.com](mailto:info@fluppisoft.com)  
+Webseite: [www.fluppisoft.com](https://fluppisoft.com/)
 
 **Handelsregister:**  
 Amtsgericht München HRB 299447
