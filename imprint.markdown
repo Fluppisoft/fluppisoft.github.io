@@ -6,31 +6,25 @@ permalink: /imprint/
 
 # Angaben gemäß § 5 TMG
 
-**Fluppisoft GmbH**
-
+**Fluppisoft GmbH**  
 Hauptstraße 2B  
 85579 Neubiberg  
 Deutschland
 
-**Geschäftsführer:**
-
+**Geschäftsführer:**  
 Lukas Rustemeyer
 
-**Kontakt:**
-
-E-Mail: info@fluppisoft.com
+**Kontakt:**  
+E-Mail: info@fluppisoft.com  
 Webseite: www.fluppisoft.com
 
-**Handelsregister:**
-
+**Handelsregister:**  
 Amtsgericht München HRB 299447
 
-**Umsatzsteuer-Identifikationsnummer:**
-
+**Umsatzsteuer-Identifikationsnummer:**  
 DE451780574
 
-**Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:**
-
+**Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:**  
 Lukas Rustemeyer
 
 # Haftungsausschluss (Disclaimer)
