@@ -192,13 +192,70 @@ pre {
   }
 }
 
+.footer-col-links{
+  display: flex; 
+  max-width: 350px; 
+  min-width: 250px;
+}
 
+/**
+ * Home Page
+ */
+.home-side {
+  background-image: linear-gradient(to right, $background-color 5%, transparent 100%), url('../../assets/images/gameplay.jpg');
+  background-size: cover;
+  background-position: 400px;
+  background-repeat: no-repeat;
+  min-height: 350px;
+  height: 350px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.home-blogs{
+  margin-top: 50px;
+  background-image: linear-gradient(to top, $background-color 10%, transparent 100%), url('../../assets/images/gameplay2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-blogs-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+}
+
+.home-side-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100% - 60px);
+  min-width: 335px;
+  max-width: 500px;
+}
+
+.home-side-content img{
+  border-radius: 5px;
+  width: calc(100% - 10px);
+  margin-left: 5px;
+}
 
 /**
  * Wrapper
  */
 .wrapper {
-  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  /*max-width: calc(#{$content-width} - (#{$spacing-unit}));*/
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit * .5;
@@ -206,10 +263,26 @@ pre {
   @extend %clearfix;
 
   @media screen and (min-width: $on-large) {
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    /*max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));*/
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
   }
+}
+
+.wrapper-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.wrapper-center-original {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  max-width: calc(#{$content-width} - (#{$spacing-unit}));
 }
 
 

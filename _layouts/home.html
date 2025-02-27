@@ -3,22 +3,19 @@ layout: base
 ---
 
 <div class="home">
-  <div class="center-content">
-    {%- if page.title -%}
-      <h1 class="post-title">{{ page.title }}</h1>
-    {%- endif -%}
-  
-    {{ content }}
+  <div class="home-side">
+    <div class="home-side-content">
+      <div>
+        <img src="/assets/images/brick-rigs-logo.png">
+        <p class="widget-text">Brick Rigs, a physics sandbox game developed by Fluppisoft.</p>
+      </div>
+      <a href="/brick-rigs/" class="widget-button">Learn More</a>
+    </div>
   </div>
-
-  {% include widget.html
-    image="/assets/images/brick-rigs-logo.png"
-    text="Brick Rigs, a physics sandbox game developed by Fluppisoft."
-    ref="/brick-rigs/"
-  %}
-  {% include widget.html
-  image="/assets/images/blog-logo.png"
-  text="Read the Fluppisoft development blog to stay up to date with the latest updates and news."
-  ref="/blog/"
-  %}
+  <div class="home-blogs">
+    <div class="home-blogs-div">
+      <p class="widget-text">Read the Fluppisoft development blog to stay up to date with the latest updates and news.</p>
+      <a href="/blog/" class="widget-button">Learn More</a>
+    </div>
+  </div>
 </div>
