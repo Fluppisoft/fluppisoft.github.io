@@ -1,13 +1,17 @@
 ---
-layout: page
+layout: base
 title: Brick Rigs
 permalink: /brick-rigs/
 ---
+  <div class="home-side">
+    <div class="home-side-content">
+      <div>
+        <img src="/assets/images/brick-rigs-logo.png">
+        <p class="widget-text">Brick Rigs is a physics sandbox game running on Unreal Engine 4. It focuses on freedom, creativity, community and destruction.</p>
+      </div>
+      <a href="https://store.steampowered.com/app/552100/Brick_Rigs/" class="widget-button">Available on Steam</a>
+    </div>
+  </div>
+  <div class="home-blogs">
 
-Brick Rigs is a physics sandbox game running on Unreal Engine 4. It focuses on freedom, creativity, community and destruction.
-
-{% include widget.html
-  image="/assets/images/steam-logo.png"
-  text="Brick Rigs is available on Steam."
-  ref="https://store.steampowered.com/app/552100/brick_rigs/"
-%}
+  </div>
