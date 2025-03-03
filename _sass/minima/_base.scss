@@ -199,6 +199,30 @@ pre {
 }
 
 /*
+  Scrollbar
+*/
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 5px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+/*
 Blog Page
 */
 .blogs-page {
@@ -207,10 +231,27 @@ Blog Page
   background-color: transparent;
   background-image: 
     linear-gradient(to right, $background-color 32%, transparent 100%),
-    url('../../assets/images/gameplay.jpg');
+    url('../../assets/images/blog-imge.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 5px;
+}
+
+/*
+  Brick rigs page
+*/
+
+.brickrigs-blogs{
+  margin-top: 50px;
+  background-image: linear-gradient(to top, $background-color 10%, transparent 100%), url('../../assets/images/brick-rigs-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /**
