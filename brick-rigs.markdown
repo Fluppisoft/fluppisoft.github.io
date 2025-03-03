@@ -13,7 +13,7 @@ permalink: /brick-rigs/
     </div>
   </div>
   <div class="brickrigs-blogs" style="display: flex; justify-content: end">
-    <div class="home-side-content" style="margin-right: 30px">
+    <div class="home-side-content" style="margin-right: 5px">
       <div>
         <img src="/assets/images/discord-brick-rigs-logo.png">
         <p class="widget-text">Join the Brick Rigs community to share knowledge, exchange tips, and explore creative building!</p>

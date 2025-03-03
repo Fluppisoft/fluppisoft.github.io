@@ -237,6 +237,16 @@ Blog Page
   border-radius: 5px;
 }
 
+@media (max-width: 512px) {
+  .blogs-page {
+    background-image: 
+    linear-gradient(to top, $background-color 32%, transparent 100%),
+    url('../../assets/images/blog-imge.jpg');
+    background-position: 500px; 
+  }
+}
+
+
 /*
   Brick rigs page
 */
@@ -269,6 +279,22 @@ Blog Page
   display: flex;
   align-items: center;
 }
+
+@media (max-width: 512px) {
+  .home-side {
+    background-image: linear-gradient(to top, $background-color 5%, transparent 100%), url('../../assets/images/gameplay.jpg');
+    background-size: cover;
+    background-position: 0px;
+    background-repeat: no-repeat;
+    min-height: 350px;
+    height: 350px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+}
+
 
 .home-blogs{
   margin-top: 50px;
