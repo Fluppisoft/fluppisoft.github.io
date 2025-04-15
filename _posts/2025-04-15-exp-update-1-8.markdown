@@ -66,6 +66,10 @@ You can now hold the control or shift key while dragging spin boxes. The control
 
 # Miscellaneous
 
+## Asynchronous Vehicle Spawning
+
+Previously, vehicles were spawned synchronously on the game thread, causing the entire game to pause until the process completed. Since tasks like brick creation and connection calculation are computationally intensive, this could lead to freezes ranging from brief stutters to multi-second delays. This issue was especially disruptive in multiplayer, where new vehicles spawned by other players could frequently cause hitches. With this update, vehicle spawning is now distributed over multiple frames.
+
 ## HDR Support
 
 Experimental HDR support was added, which can be enabled in the graphics settings. Note that this feature isn't fully fleshed out in the Unreal Engine 4 yet, so it might not work correctly on every system.
