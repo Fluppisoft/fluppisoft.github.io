@@ -1,0 +1,75 @@
+---
+layout: post
+title:  "Brick Rigs Experimental Update 1.8 Released!"
+date:   2025-04-15 00:00:00 +0000
+category: brick-rigs
+---
+Effective immediate, update 1.8 is out on the experimental branch and can be tested! Be aware that since this update has so many changes internally, there will be bugs. If you want to know what to expect from this update, please read on:
+
+# Bricks
+
+## Spinner Bricks
+
+You might already know these from the last [development blog post](https://fluppisoft.com/blog/spinner-bricks/). They allow you to create arches and circles at custom angles, radii, sizes and shapes.
+
+![](/assets/spinner-bricks/spinner-demo.gif)
+
+## Scalable Thrusters
+
+Thrusters are finally fully scalable! I'm pretty excited about this myself, and it has been requested by the community for years.
+
+![](/assets/update-1-8/scalable-thrusters.gif)
+
+Along with that, they also received a new heat glow effect for the nozzle.
+
+![](/assets/update-1-8/thruster-glow.gif)
+
+Old non-scalable thrusters are automatically replaced with scalable thrusters upon loading a vehicle. The input scale is adjusted so the thrust remains the same as before.
+
+## Scalable Flaps
+
+As seen in this [development blog post](https://fluppisoft.com/blog/scalable-flaps/), flaps are now also scalable. So instead of two different flaps sizes, there is now a virtually infinite amount of them.
+
+![](/assets/scalable-flaps/working-flaps.gif)
+
+## Scalable Fuel Tanks and Detonators
+
+Along with thrusters and flaps, fuel tanks and detonators are now also scalable. More and more bricks will follow this trend in future updates.
+
+## Exhaust Trail Effect
+
+Exhaust bricks now have a setting to select the desired effect. So far there is the old smoke effect along with a new trail effect.
+
+![](/assets/update-1-8/exhaust-effects.gif)
+
+## Camera and Seat Names and Order
+
+The display names and order of cameras and seats can now be customized in the editor. The custom names will be displayed when interacting with a seat or cycling through camera modes for example. The order in which you could cycle through seats and cameras was sort of random previously. Now you can see and customize it.
+
+# User Interface
+
+## Color Properties
+
+Color properties received a bit of an overhaul, both on the outside and inside. Previously, color was stored and saved in HSV (hue, value, saturation) format. Now it's using the more common 8 bit RGB (red, green, blue) format, which makes it possible to show and enter precise hex color values. Along with that you can now also switch the sliders between RGB and HSV mode.
+
+![](/assets/update-1-8/color-property.gif)
+
+## Numeric Properties
+
+Internally, float properties, vector properties and brick size properties were all merged into the same type. This streamlines code as well as the user interfaces and allows features to be shared between them more easily. For example, axes of all multidimensional properties can now be locked together, and you can toggle between brick units and meters on all distance based properties.
+
+![](/assets/update-1-8/numeric-properties.gif)
+
+## Spin Boxes
+
+You can now hold the control or shift key while dragging spin boxes. The control key will switch between relative and absolute mouse input, while the shift makes dragging slower and gives you finer control.
+
+# Miscellaneous
+
+## HDR Support
+
+Experimental HDR support was added, which can be enabled in the graphics settings. Note that this feature isn't fully fleshed out in the Unreal Engine 4 yet, so it might not work correctly on every system.
+
+## Code Cleanup
+
+I continued to remove or refactor old code. While this won't be noticeable in game, it will allow me to make changes easier and catch bugs earlier in the future.
