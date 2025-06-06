@@ -7,19 +7,24 @@ url: "https://fluppisoft.com"
 theme: minima
 
 plugins:
-  - jekyll-feed
+- jekyll-feed
 
 minima:
   skin: dark
   social_links:
-    - { platform: instagram, title: Instagram,  user_url: "https://instagram.fluppisoft.com/" }
-    - { platform: twitter, title: Twitter, user_url: "https://twitter.fluppisoft.com/" }
-  
+  - { platform: instagram, title: Instagram, user_url: "https://instagram.fluppisoft.com/" }
+  - { platform: twitter, title: Twitter, user_url: "https://twitter.fluppisoft.com/" }
+
 header_pages:
-  - index.markdown
-  - brick-rigs.markdown
-  - blog.markdown
-  - legal.markdown
-  - imprint.markdown
-    
+- index.markdown
+- brick-rigs.markdown
+- blog.markdown
+- legal.markdown
+- imprint.markdown
+
 permalink: /blog/:title/
+
+exclude:
+- README.md
+- .gitignore
+- python/

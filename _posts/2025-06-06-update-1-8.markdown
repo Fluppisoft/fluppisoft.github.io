@@ -1,0 +1,96 @@
+---
+layout: post
+title:  "Brick Rigs Update 1.8 Released!"
+date:   2025-06-06 00:00:00 +0000
+category: brick-rigs
+---
+After several months of testing and bug fixing, update **1.8** is now live! Here is a summary of the most important changes:
+
+# Bricks
+
+## Spinner Brick
+
+The new spinner brick is a whole new type of scalable. It allows you to create arches and circles at custom angles, radii, sizes and shapes.
+
+![](/assets/spinner-bricks/spinner-demo.gif)
+
+## Scalable Flaps
+
+Flaps are now also scalable. So instead of two different flaps sizes, there is now a virtually infinite amount of them.
+
+![](/assets/scalable-flaps/working-flaps.gif)
+
+## Scalable Thrusters
+
+Thrusters are finally fully scalable! I'm pretty excited about this myself, and it has been requested by the community for years.
+
+![](/assets/update-1-8/scalable-thrusters.gif)
+
+Along with that, they also received a new heat glow effect for the nozzle.
+
+![](/assets/update-1-8/thruster-glow.gif)
+
+Old non-scalable thrusters are automatically replaced with scalable thrusters upon loading a vehicle. The input scale is adjusted so the thrust remains the same as before.
+
+## More Scalables
+
+Besides thrusters and flaps, all of the following bricks are now scalable:
+- Fuel tanks
+- Detonators
+- RC bricks
+- Math bricks
+- Sensor bricks
+- Switch bricks
+
+## Exhaust Trail Effect
+
+Exhaust bricks now have a setting to select the desired effect. So far there is the old smoke effect along with a new trail effect.
+
+![](/assets/update-1-8/exhaust-effects.gif)
+
+## Camera and Seat Names and Order
+
+The display names and order of cameras and seats can now be customized in the editor. The custom names will be displayed when interacting with a seat or cycling through camera modes for example. The order in which you could cycle through seats and cameras was sort of random previously. Now you can see and customize it.
+
+## New Sensor Modes
+
+The following new sensor modes were added:
+- Frames per second
+- Frame delta time (1 / frames per second)
+- Time of day
+- Wind speed and direction
+- Altitude over sea level
+
+# User Interface
+
+## Color Properties
+
+Color properties received a bit of an overhaul, both on the outside and inside. Previously, color was stored and saved in HSV (hue, value, saturation) format. Now it's using the more common 8 bit RGB (red, green, blue) format, which makes it possible to show and enter precise hex color values. Along with that you can now also switch the sliders between RGB and HSV mode.
+
+![](/assets/update-1-8/color-property.gif)
+
+## Numeric Properties
+
+Internally, float properties, vector properties and brick size properties were all merged into the same type. This streamlines code as well as the user interfaces and allows features to be shared between them more easily. For example, axes of all multidimensional properties can now be locked together, and you can toggle between brick units and meters on all distance based properties.
+
+![](/assets/update-1-8/numeric-properties.gif)
+
+# Miscellaneous Improvements
+
+- Made vehicle spawning asynchronous to reduce multiplayer hitches
+- Increased precision of output channel values
+- Added fire mode switching for handheld guns
+- Added Newton thrust slider to thrusters
+- Added experimental HDR support
+- Added ability to move sliders more precisely or faster by holding control or shift
+
+# Bug Fixes
+
+- Fixed menu music randomly stopping after a while
+- Fixed vehicle whitelist not being loaded correctly when launching gamec
+- Fixed redirector 1x1x1 mesh being rotated 180°, making connectors not match up correctly
+- Fixed UI scale affecting mini map resolution
+- Fixed actuators no resetting position after repairing in multiplayer
+- Fixed inaccurate collision and mass properties on scalable cylinders
+- Fixed tank tracks not reappearing on clients after repairing
+- Fixed changing frame rate limit not activating the apply button
