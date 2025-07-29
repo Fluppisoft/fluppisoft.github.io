@@ -89,6 +89,30 @@ h2 {
 
 // Custom styles
 
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: auto;
+  text-align: center;
+  gap: 30px;
+}
+
+.page-banner {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.widget-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: auto;
+  text-align: center;
+  gap: 30px;
+}
+
 .widget {
   display: flex;
   flex-direction: column;
@@ -97,10 +121,15 @@ h2 {
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   border-radius: 16px;
-  border: 2px solid $widget-border-color;
-  background-color: $widget-color;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  border: 2px solid $button-border-color;
+  background-color: $button-color;
+  gap: 20px;
+}
+
+.widget:hover {
+  background-color: $button-hover-color;
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
 }
 
 .widget-image {
@@ -113,18 +142,8 @@ h2 {
   margin: 15px 0;
   text-align: center;
   font-size: 1em;
-  color: $text-color;
-}
-
-.widget-button {
-  padding: 10px 20px;
-  text-decoration: none;
-  color: $button-text-color;
-  background-color: $button-color;
-  border-radius: 5px;
-  border: 2px solid $button-border-color;
   font-weight: bold;
-  text-align: center;
+  color: $title-color;
 }
 
 .widget-button:hover {
@@ -159,4 +178,22 @@ h2 {
 
 .footer-description {
   color: $text-color;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery-item {
+  flex: 1 1 calc(33.333% - 10px);
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
 }

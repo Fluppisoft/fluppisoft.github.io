@@ -1,0 +1,20 @@
+---
+layout: base
+---
+<article class="page">
+
+  {%- if page.display_title -%}
+  <header class="post-header">
+    <h1 class="post-title">{{ page.display_title | escape }}</h1>
+  </header>
+  {%- endif -%}
+
+  {%- if page.banner -%}
+  <div class="page-banner">
+    <img src="{{ page.banner}}" class="widget-image">
+  </div>
+  {%- endif -%}
+
+  {{ content }}
+
+</article>

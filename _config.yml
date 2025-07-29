@@ -19,7 +19,7 @@ header_pages:
 - index.markdown
 - brick-rigs.markdown
 - blog.markdown
-- legal.markdown
+- eula.markdown
 - imprint.markdown
 
 permalink: /blog/:title/

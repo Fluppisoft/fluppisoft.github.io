@@ -1,6 +1,7 @@
 ---
 layout: page
-title: End User License Agreement (EULA)
+title: EULA
+display_title: End User License Agreement (EULA)
 permalink: /eula/
 ---
 
