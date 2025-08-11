@@ -48,7 +48,7 @@ body {
 .footer-col-2,
 .footer-col-3 {
   flex: 1 1 25%;
-  horiz-align: left;
+  align-content: left;
   margin-bottom: 30px;
 }
 
@@ -124,12 +124,12 @@ h2 {
   border: 2px solid $button-border-color;
   background-color: $button-color;
   gap: 20px;
+  transition: transform 0.2s ease;
 }
 
 .widget:hover {
   background-color: $button-hover-color;
   transform: scale(1.02);
-  transition: transform 0.2s ease;
 }
 
 .widget-image {
@@ -196,4 +196,38 @@ h2 {
   height: auto;
   display: block;
   border-radius: 4px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $background-color;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  border: 1px solid;
+  width: max-content;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-weight: normal;
+  padding: 8px;
+  display: block;
+  text-align: left;
+  line-height: normal;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-arrow {
+  font-size: 1.5em;
+  margin-left: 2px;
+  vertical-align: center;
 }

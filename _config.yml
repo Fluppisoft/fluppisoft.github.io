@@ -16,11 +16,10 @@ minima:
   - { platform: twitter, title: Twitter, user_url: "https://twitter.fluppisoft.com/" }
 
 header_pages:
-- index.markdown
-- brick-rigs.markdown
-- blog.markdown
-- eula.markdown
-- imprint.markdown
+- index.md
+- brick-rigs/index.md
+- blog.md
+- imprint.md
 
 permalink: /blog/:title/
 

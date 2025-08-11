@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Imprint
-display_title: Impressum
+title: Impressum
 permalink: /imprint/
 ---
 

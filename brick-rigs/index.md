@@ -2,7 +2,9 @@
 layout: custom-page
 title: Brick Rigs
 banner: "/assets/images/brick-rigs-logo.png"
-permalink: /brick-rigs/
+subpages:
+- brick-rigs/eula/index.md
+- brick-rigs/privacy-policy/index.md
 ---
 
 Brick Rigs is a physics sandbox game running on Unreal Engine 4. It focuses on freedom, creativity, community and destruction.
