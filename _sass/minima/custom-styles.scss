@@ -60,6 +60,11 @@ body {
   color: $text-color;
 }
 
+strong {
+  color: $title-color;
+  font-weight: bold;
+}
+
 h1,
 h2,
 h3,
