@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1024"
+   height="256"
+   viewBox="0 0 1024 256"
+   role="img"
+   aria-label="Bug tracker"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="blog-logo.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.6523438"
+     inkscape:cx="311.04566"
+     inkscape:cy="237.71429"
+     inkscape:window-width="3840"
+     inkscape:window-height="2126"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13" />
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bugs-bg"
+       x1="0"
+       y1="0"
+       x2="1024"
+       y2="256"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#4a1560"
+         id="stop1"
+         style="stop-color:#641583;stop-opacity:1;" />
+      <stop
+         offset="0.55000001"
+         stop-color="#650f74"
+         id="stop2"
+         style="stop-color:#751388;stop-opacity:1;" />
+      <stop
+         offset="1"
+         stop-color="#7a2490"
+         id="stop3"
+         style="stop-color:#82258f;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       id="bugs-glow"
+       x1="0"
+       y1="128"
+       x2="340"
+       y2="128"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#c668dc"
+         stop-opacity="0.28"
+         id="stop4" />
+      <stop
+         offset="100%"
+         stop-color="#c668dc"
+         stop-opacity="0"
+         id="stop5" />
+    </linearGradient>
+  </defs>
+  <rect
+     width="1024"
+     height="256"
+     fill="url(#bugs-bg)"
+     id="rect5" />
+  <path
+     d="m 210.22343,164.64928 h -66.49131 m 66.49131,-25.22851 h -66.49131 m 66.49131,-25.22851 h -66.49131"
+     id="path7"
+     style="fill:none;stroke:#ececec;stroke-width:8;stroke-linecap:round;stroke-linejoin:round" />
+  <text
+     x="300"
+     y="142"
+     fill="#ececec"
+     font-family="Montserrat, 'Segoe UI', sans-serif"
+     font-size="64px"
+     font-weight="700"
+     letter-spacing="0.02em"
+     id="text12">News</text>
+  <text
+     x="302"
+     y="188"
+     fill="#d1b7dc"
+     font-family="Montserrat, 'Segoe UI', sans-serif"
+     font-size="24px"
+     font-weight="600"
+     letter-spacing="0.12em"
+     id="text13">READ THE LATEST NEWS</text>
+  <rect
+     style="fill:none;stroke:#ececec;stroke-width:8;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect15"
+     width="120.17013"
+     height="136.6362"
+     x="116.13552"
+     y="55.916073"
+     ry="10.130684"
+     rx="10.130685" />
+  <rect
+     style="fill:#ececec;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect16"
+     width="87.360168"
+     height="17.328802"
+     x="133.4736"
+     y="71.981178"
+     ry="8.2945509"
+     rx="8.2945509" />
+</svg>

@@ -320,6 +320,12 @@ h2 {
 .widget-media {
   position: relative;
   aspect-ratio: 4 / 1;
+  background:
+    linear-gradient(
+      145deg,
+      rgba($brand-color, 0.16),
+      rgba($background-color, 0.42)
+    );
 }
 
 .widget-image {

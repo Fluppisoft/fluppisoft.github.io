@@ -1,6 +1,6 @@
 <a class="widget" href="{{ include.ref }}">
     <div class="widget-media">
-        <img src="{{ include.image }}" class="widget-image" alt="">
+        <img src="{{ include.image }}" class="widget-image" alt="{{ include.title | default: '' }}">
     </div>
     <div class="widget-body">
         <p>{{ include.text }}</p>

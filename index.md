@@ -32,7 +32,7 @@ text="Discover Brick Rigs, a physics sandbox game developed by Fluppisoft."
 ref="/brick-rigs/"
 %}
 {% include widget.html
-image="/assets/images/blog-logo.png"
+image="/assets/images/blog-logo.svg"
 text="Stay up to date with the latest Fluppisoft news."
 ref="/blog/"
 %}

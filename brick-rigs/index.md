@@ -25,21 +25,24 @@ Do whatever you want in a physics sandbox full of chaotic destruction, endless p
   <h2 class="section-title">Join the community</h2>
 <div class="widget-container">
 {% include widget.html
-  image="/assets/images/steam-logo.png"
+  image="/assets/images/steam-logo.svg"
   text="Buy Brick Rigs on Steam."
   ref="https://steam.brick-rigs.com/"
+  title="Steam"
 %}
 
 {% include widget.html
-image="/assets/images/discord-logo.png"
-text="Join the official Brick Rigs Discord server."
-ref="https://discord.brick-rigs.com/"
+  image="/assets/images/discord-logo.svg"
+  text="Join the official Brick Rigs Discord server."
+  ref="https://discord.brick-rigs.com/"
+  title="Discord"
 %}
 
 {% include widget.html
-image="/assets/images/bugs-logo.png"
-text="Report bugs on the official bug tracker."
-ref="https://bugs.brick-rigs.com/"
+  image="/assets/images/bugs-logo.svg"
+  text="Report bugs on the official bug tracker."
+  ref="https://bugs.brick-rigs.com/"
+  title="Bug tracker"
 %}
 </div>
 </section>

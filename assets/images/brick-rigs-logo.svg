@@ -4,17 +4,48 @@
    width="1024"
    height="256"
    id="svg16"
-   sodipodi:docname="BrickRigsLogo.svg"
+   sodipodi:docname="brick-rigs-logo.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs16" />
+     id="defs16">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ffc989;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#ff9619;stop-opacity:1;"
+         offset="0.27738157"
+         id="stop3" />
+      <stop
+         style="stop-color:#ff9619;stop-opacity:1;"
+         offset="0.65224695"
+         id="stop4" />
+      <stop
+         style="stop-color:#ffb561;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="-2.6659696"
+       y1="28.29274"
+       x2="1021.8672"
+       y2="252.76738"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="namedview16"
-     pagecolor="#ff9619"
+     pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
@@ -22,8 +53,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.8754903"
-     inkscape:cx="619.03814"
-     inkscape:cy="159.15839"
+     inkscape:cx="523.59642"
+     inkscape:cy="128.23313"
      inkscape:window-width="3840"
      inkscape:window-height="2126"
      inkscape:window-x="-11"
@@ -35,7 +66,7 @@
      id="strokes"
      inkscape:label="strokes">
     <rect
-       style="fill:#ff9619;fill-opacity:1;stroke:none;stroke-width:3.00094;stroke-linecap:round;stroke-dasharray:3.00095, 6.00189"
+       style="fill:url(#linearGradient2);fill-opacity:1;stroke:none;stroke-width:3.00094;stroke-linecap:round;stroke-dasharray:3.00095, 6.00189"
        id="rect17"
        width="1024"
        height="256"

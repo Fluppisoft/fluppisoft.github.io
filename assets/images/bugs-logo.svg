@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1024"
+   height="256"
+   viewBox="0 0 1024 256"
+   role="img"
+   aria-label="Bug tracker"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="bugs-logo.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.6523438"
+     inkscape:cx="287.29308"
+     inkscape:cy="135.5405"
+     inkscape:window-width="3840"
+     inkscape:window-height="2126"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13" />
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bugs-bg"
+       x1="0"
+       y1="0"
+       x2="1024"
+       y2="256"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a1560"
+         id="stop1" />
+      <stop
+         offset="55%"
+         stop-color="#650f74"
+         id="stop2" />
+      <stop
+         offset="100%"
+         stop-color="#7a2490"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       id="bugs-glow"
+       x1="0"
+       y1="128"
+       x2="340"
+       y2="128"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#c668dc"
+         stop-opacity="0.28"
+         id="stop4" />
+      <stop
+         offset="100%"
+         stop-color="#c668dc"
+         stop-opacity="0"
+         id="stop5" />
+    </linearGradient>
+  </defs>
+  <rect
+     width="1024"
+     height="256"
+     fill="url(#bugs-bg)"
+     id="rect5" />
+  <rect
+     width="360"
+     height="256"
+     fill="url(#bugs-glow)"
+     id="rect6" />
+  <g
+     id="g13"
+     transform="rotate(180,176,141)">
+    <ellipse
+       cx="176"
+       cy="144"
+       rx="34"
+       ry="42"
+       id="ellipse6"
+       style="fill:none;stroke:#ececec;stroke-width:8;stroke-linecap:round;stroke-linejoin:round" />
+    <path
+       d="m 148,118 -18,-16 m 74,16 18,-16 m -82,42 h -18 m 90,0 h 18 m -80,32 -18,16 m 70,-16 18,16 m -62,12 -10,18 m 46,-18 10,18"
+       id="path6"
+       style="fill:none;stroke:#ececec;stroke-width:8;stroke-linecap:round;stroke-linejoin:round"
+       sodipodi:nodetypes="cccccccccccccccc" />
+    <path
+       d="m 164,140 h 24 m -24,10 h 24 m -24,10 h 24"
+       id="path7"
+       style="fill:none;stroke:#ececec;stroke-width:8;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  <text
+     x="300"
+     y="142"
+     fill="#ececec"
+     font-family="Montserrat, Segoe UI, sans-serif"
+     font-size="64"
+     font-weight="700"
+     letter-spacing="0.02em"
+     id="text12">Bug Tracker</text>
+  <text
+     x="302"
+     y="188"
+     fill="#d1b7dc"
+     font-family="Montserrat, Segoe UI, sans-serif"
+     font-size="24"
+     font-weight="600"
+     letter-spacing="0.12em"
+     id="text13">REPORT AN ISSUE</text>
+</svg>
