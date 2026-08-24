@@ -41,6 +41,12 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+
+  // Minima's .wrapper clearfix becomes an unwanted third flex item here.
+  &::after {
+    content: none;
+    display: none;
+  }
 }
 
 .site-title {
