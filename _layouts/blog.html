@@ -25,16 +25,24 @@ layout: base
   <ul class="post-list">
     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
     {%- for post in posts -%}
-    <li>
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
-      {%- if site.show_excerpts -%}
-      {{ post.excerpt }}
+    {%- assign preview_image = post.preview_image | default: post.image -%}
+    <li class="news-item{% if preview_image %} has-preview{% endif %}">
+      {%- if preview_image -%}
+      <a class="news-preview" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ preview_image | relative_url }}" alt="" loading="lazy" width="112" height="112">
+      </a>
       {%- endif -%}
+      <div class="news-item-content">
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+        {{ post.excerpt }}
+        {%- endif -%}
+      </div>
     </li>
     {%- endfor -%}
   </ul>

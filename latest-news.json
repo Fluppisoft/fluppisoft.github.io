@@ -4,8 +4,10 @@ permalink: /latest-news.json
 ---
 
 {% assign latest = site.posts | first %}
+{% assign preview_image = latest.preview_image | default: latest.image %}
 {
   "title": {{ latest.title | jsonify }},
   "url": {{ latest.url | absolute_url | jsonify }},
-  "date": {{ latest.date | date_to_xmlschema | jsonify }}
+  "date": {{ latest.date | date_to_xmlschema | jsonify }},
+  "preview_image": {% if preview_image %}{{ preview_image | absolute_url | jsonify }}{% else %}null{% endif %}
 }
