@@ -1,5 +1,9 @@
 <a class="widget" href="{{ include.ref }}">
-    <img src="{{ include.image }}" class="widget-image" alt="">
-    <p class="widget-text">{{ include.text }}</p>
-    <span class="widget-cta">Explore</span>
+    <div class="widget-media">
+        <img src="{{ include.image }}" class="widget-image" alt="">
+    </div>
+    <div class="widget-body">
+        <p>{{ include.text }}</p>
+        <span class="widget-cta">Explore</span>
+    </div>
 </a>

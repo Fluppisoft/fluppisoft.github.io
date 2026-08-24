@@ -43,12 +43,11 @@ body {
 .site-nav {
   .page-link {
     color: $title-color;
-    font-weight: 600;
+    font-weight: 700;
     transition: color 0.2s ease;
 
     &:hover {
       color: $link-base-color;
-      text-decoration: none;
     }
   }
 }
@@ -128,6 +127,64 @@ h2 {
 
 // Custom styles
 
+// Shared surface treatment for the card-like elements — the banner frame,
+// feature cards, widgets, quick-links and gallery items. Brand-tinted gradient,
+// outline, drop shadow and a lift-on-hover animation, defined once so they
+// stay in sync.
+//
+// The hover gradient sits on a ::before overlay rather than on the element
+// itself: CSS cannot transition between two gradients, but it can transition
+// the overlay's opacity, which animates the change smoothly.
+%surface {
+  position: relative;
+  isolation: isolate;
+  border: $outline-width solid rgba($text-color, 0.22);
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba($brand-color, 0.24),
+      rgba($brand-color, 0.06) 42%,
+      rgba(0, 0, 0, 0.14)
+    ),
+    rgba($background-color, 0.55);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      145deg,
+      rgba($brand-color, 0.38),
+      rgba($brand-color, 0.12) 45%,
+      rgba(0, 0, 0, 0.1)
+    );
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+
+  // Keep real content above the hover overlay.
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba($link-base-color, 0.6);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -147,15 +204,17 @@ h2 {
 }
 
 .page-banner-frame {
+  @extend %surface;
+
   width: min(100%, 900px);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .page-banner {
+  display: block;
   width: 100%;
   height: auto;
-  border: 1px solid rgba($title-color, 0.18);
-  border-radius: 24px;
-  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
 }
 
 .hero-kicker {
@@ -200,20 +259,9 @@ h2 {
 }
 
 .feature-card {
+  @extend %surface;
+
   padding: 16px;
-  border-radius: 14px;
-  border: 1px solid rgba($text-color, 0.2);
-  // Brand-tinted sheen from the top-left fading into a darker bottom-right,
-  // layered over the translucent base so the page glow still shows through.
-  background:
-    linear-gradient(
-      145deg,
-      rgba($brand-color, 0.24),
-      rgba($brand-color, 0.06) 42%,
-      rgba(0, 0, 0, 0.14)
-    ),
-    rgba($background-color, 0.55);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 
   h3 {
     margin: 0 0 8px;
@@ -234,20 +282,14 @@ h2 {
   gap: 10px;
 
   a {
+    @extend %surface;
+
     display: inline-flex;
     align-items: center;
     padding: 8px 12px;
     border-radius: 999px;
-    border: 1px solid rgba($text-color, 0.28);
     color: $title-color;
     text-decoration: none;
-    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-
-    &:hover {
-      border-color: rgba($link-base-color, 0.65);
-      color: $link-base-color;
-      transform: translateY(-1px);
-    }
   }
 }
 
@@ -262,43 +304,48 @@ h2 {
 }
 
 .widget {
+  @extend %surface;
+
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 100%;
   box-sizing: border-box;
   min-width: 0;
-  padding: 14px;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.28);
-  border-radius: 18px;
-  border: 1px solid rgba($button-border-color, 0.35);
-  background: linear-gradient(170deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
-    $button-color;
-  gap: 14px;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  // The artwork runs edge to edge, so it needs clipping to the card's corners.
+  overflow: hidden;
   text-decoration: none;
 }
 
-.widget:hover {
-  background: $button-hover-color;
-  border-color: rgba($link-base-color, 0.6);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
-  transform: translateY(-2px);
+.widget-media {
+  position: relative;
+  aspect-ratio: 4 / 1;
 }
 
 .widget-image {
+  position: relative;
+  z-index: 1;
+  display: block;
   width: 100%;
-  height: auto;
-  border-radius: 12px;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.widget-text {
-  margin: 4px 0 0;
-  text-align: left;
-  font-size: 0.99rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: $title-color;
+.widget:hover .widget-image {
+  transform: scale(1.03);
+}
+
+.widget:hover .widget-glow {
+  opacity: 0.72;
+}
+
+.widget-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
 }
 
 .widget-cta {
@@ -349,7 +396,6 @@ h2 {
   width: fit-content;
   gap: 8px;
   color: $link-base-color;
-  margin-bottom: 6px;
 }
 
 .footer-description {
@@ -378,28 +424,17 @@ h2 {
 }
 
 .gallery-item {
-  position: relative;
+  @extend %surface;
+
   display: block;
   overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid rgba($text-color, 0.22);
-  background: rgba($background-color, 0.65);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
   aspect-ratio: 16 / 9;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.gallery-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
-  border-color: rgba($link-base-color, 0.55);
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
   display: block;
-  border-radius: 12px;
   object-fit: cover;
   transition: transform 0.25s ease;
 }
@@ -449,11 +484,6 @@ h2 {
 
   .page-content-body {
     gap: 24px;
-  }
-
-  .page-banner-frame {
-    padding: 12px;
-    border-radius: 16px;
   }
 
   .widget-container {
