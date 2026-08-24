@@ -5,8 +5,8 @@ layout: base
 
 
   {%- if page.banner -%}
-  <div class="page-banner">
-    <img src="{{ page.banner}}" class="widget-image">
+  <div class="page-banner-frame">
+    <img src="{{ page.banner }}" class="page-banner" alt="{{ page.title | default: site.title | escape }}">
   </div>
   {%- else if page.title -%}
   <header class="post-header">
@@ -14,6 +14,8 @@ layout: base
   </header>
   {%- endif -%}
 
-  {{ content }}
+  <div class="page-content-body">
+    {{ content }}
+  </div>
 
 </article>

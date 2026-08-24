@@ -1,6 +1,6 @@
 title: Fluppisoft
 description: >-
-  Welcome to Fluppisoft, a game developer from Bavaria.
+  Welcome to Fluppisoft, an independent game developer from Bavaria.
 baseurl: ""
 url: "https://fluppisoft.com"
 
@@ -13,7 +13,8 @@ minima:
   skin: dark
   social_links:
   - { platform: instagram, title: Instagram, user_url: "https://instagram.fluppisoft.com/" }
-  - { platform: twitter, title: Twitter, user_url: "https://twitter.fluppisoft.com/" }
+  - { platform: tiktok, title: TikTok, user_url: "https://www.tiktok.com/@fluppisoft" }
+  - { platform: youtube, title: YouTube, user_url: "https://www.youtube.com/@FluppisoftGmbH" }
 
 header_pages:
 - index.md

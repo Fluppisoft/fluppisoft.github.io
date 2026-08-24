@@ -6,20 +6,50 @@
 }
 
 body {
+  // The gradients are sized/positioned explicitly so they stay anchored to the
+  // top of the page. Without this the body background propagates to the canvas
+  // and its percentages resolve against the full document height, so the colour
+  // at the top of the page shifts with the page's length.
+  background-color: $background-color;
+  background-image:
+    radial-gradient(circle at 20% -10%, rgba(84, 98, 255, 0.18), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(48, 220, 190, 0.12), transparent 35%);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100vh;
   font-family: 'Montserrat', sans-serif, Arial, sans-serif;
+  line-height: 1.65;
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   border-top: none;
+  border-bottom: 1px solid rgba($text-color, 0.15);
+  background-color: rgba($background-color, 0.85);
+  backdrop-filter: blur(8px);
 }
 
 .site-title {
-  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .site-nav {
   .page-link {
-    color: $link-base-color;
+    color: $title-color;
+    font-weight: 600;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $link-base-color;
+      text-decoration: none;
+    }
   }
 }
 
@@ -33,15 +63,13 @@ body {
   color: $text-color;
 }
 
-.footer-col-wrapper {
-  gap: 20px;
-}
-
 .footer-heading {
   font-size: 1em !important;
-  font-weight: bold;
+  font-weight: 700;
   color: $title-color;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .footer-col-1,
@@ -54,6 +82,16 @@ body {
 
 .footer-col-1 {
   flex: 1 1 50%;
+}
+
+.site-footer {
+  margin-top: 56px;
+  border-top: 1px solid rgba($text-color, 0.15);
+  background-color: rgba($background-color, 0.65);
+}
+
+.footer-col-wrapper {
+  gap: 32px;
 }
 
 .post-meta {
@@ -72,24 +110,20 @@ h4,
 h5,
 h6 {
   color: $title-color;
-  font-weight: bold;
-  font-size: 1em !important;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 h1 {
-  font-size: 1.5em !important;
+  font-size: clamp(1.9rem, 4vw, 2.6rem) !important;
 }
 
 h2 {
-  font-size: 1.25em !important;
+  font-size: clamp(1.4rem, 3vw, 1.95rem) !important;
 }
 
 .post-content h1 {
-  @include relative-font-size(5);
-
-  @media screen and (min-width: $on-large) {
-    @include relative-font-size(5);
-  }
+  @include relative-font-size(2.25);
 }
 
 // Custom styles
@@ -97,58 +131,193 @@ h2 {
 .page {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   width: auto;
   text-align: center;
-  gap: 30px;
+  gap: 34px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.page-content-body {
+  width: min(100%, 820px);
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.page-banner-frame {
+  width: min(100%, 900px);
 }
 
 .page-banner {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border: 1px solid rgba($title-color, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
+}
+
+.hero-kicker {
+  margin: 8px 0 0;
+  color: $link-base-color;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  margin: 10px auto 0;
+}
+
+.hero-description {
+  margin: 8px auto 0;
+  max-width: 58ch;
+  color: $text-color;
+}
+
+.content-section {
+  margin: 8px 0;
+}
+
+.section-title {
+  margin: 0 0 12px;
+}
+
+.section-lead {
+  margin: 0 auto;
+  max-width: 62ch;
+  color: $text-color;
+}
+
+.feature-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  text-align: left;
+}
+
+.feature-card {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba($text-color, 0.2);
+  // Brand-tinted sheen from the top-left fading into a darker bottom-right,
+  // layered over the translucent base so the page glow still shows through.
+  background:
+    linear-gradient(
+      145deg,
+      rgba($brand-color, 0.24),
+      rgba($brand-color, 0.06) 42%,
+      rgba(0, 0, 0, 0.14)
+    ),
+    rgba($background-color, 0.55);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+
+  h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem !important;
+  }
+
+  p {
+    margin: 0;
+    color: $text-color;
+  }
+}
+
+.quick-links {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba($text-color, 0.28);
+    color: $title-color;
+    text-decoration: none;
+    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      border-color: rgba($link-base-color, 0.65);
+      color: $link-base-color;
+      transform: translateY(-1px);
+    }
+  }
 }
 
 .widget-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  width: auto;
-  text-align: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  gap: 18px;
+  margin-top: 22px;
 }
 
 .widget {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: auto;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  border-radius: 16px;
-  border: 2px solid $button-border-color;
-  background-color: $button-color;
-  gap: 20px;
-  transition: transform 0.2s ease;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 14px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.28);
+  border-radius: 18px;
+  border: 1px solid rgba($button-border-color, 0.35);
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+    $button-color;
+  gap: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
 }
 
 .widget:hover {
-  background-color: $button-hover-color;
-  transform: scale(1.02);
+  background: $button-hover-color;
+  border-color: rgba($link-base-color, 0.6);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
 }
 
 .widget-image {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .widget-text {
-  margin: 15px 0;
-  text-align: center;
-  font-size: 1em;
-  font-weight: bold;
+  margin: 4px 0 0;
+  text-align: left;
+  font-size: 0.99rem;
+  font-weight: 600;
+  line-height: 1.5;
   color: $title-color;
+}
+
+.widget-cta {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: $link-base-color;
+  font-weight: 700;
+  font-size: 0.95rem;
+
+  &::after {
+    content: "→";
+    transition: transform 0.2s ease;
+  }
+}
+
+.widget:hover .widget-cta::after {
+  transform: translateX(2px);
 }
 
 .widget-button:hover {
@@ -177,30 +346,66 @@ h2 {
 
 .footer-link {
   display: flex;
-  gap: 10px;
+  width: fit-content;
+  gap: 8px;
   color: $link-base-color;
+  margin-bottom: 6px;
 }
 
 .footer-description {
   color: $text-color;
 }
 
+.screenshots-section {
+  margin: 10px 0;
+}
+
+.screenshots-title {
+  margin: 0;
+}
+
+.screenshots-subtitle {
+  margin: 8px auto 0;
+  max-width: 62ch;
+  color: $text-color;
+}
+
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0;
 }
 
 .gallery-item {
-  flex: 1 1 calc(33.333% - 10px);
-  box-sizing: border-box;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba($text-color, 0.22);
+  background: rgba($background-color, 0.65);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  aspect-ratio: 16 / 9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
+  border-color: rgba($link-base-color, 0.55);
 }
 
 .gallery-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  border-radius: 4px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
 }
 
 .dropdown {
@@ -213,8 +418,8 @@ h2 {
   position: absolute;
   background-color: $background-color;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  border: 1px solid;
+  border-radius: 8px;
+  border: 1px solid rgba($text-color, 0.3);
   width: max-content;
   z-index: 1;
 }
@@ -232,7 +437,40 @@ h2 {
 }
 
 .dropdown-arrow {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-left: 2px;
   vertical-align: center;
+}
+
+@media (max-width: 780px) {
+  .page {
+    gap: 24px;
+  }
+
+  .page-content-body {
+    gap: 24px;
+  }
+
+  .page-banner-frame {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .widget-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 520px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    aspect-ratio: 16 / 10;
+  }
 }

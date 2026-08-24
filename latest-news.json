@@ -1,0 +1,11 @@
+---
+layout: null
+permalink: /latest-news.json
+---
+
+{% assign latest = site.posts | first %}
+{
+  "title": {{ latest.title | jsonify }},
+  "url": {{ latest.url | absolute_url | jsonify }},
+  "date": {{ latest.date | date_to_xmlschema | jsonify }}
+}
