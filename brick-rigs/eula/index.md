@@ -9,7 +9,7 @@ This End User License Agreement ("Agreement" or "EULA") is a legal agreement bet
 
 # 1. Privacy Policy
 
-Your use of the Game is governed by our Privacy Policy, which can be found [here](https://brick-rigs.com/privacy-policy/). By using the Game, you consent to the data practices described in the Privacy Policy.
+Your use of the Game is governed by our [Privacy Policy]({{ '/brick-rigs/privacy-policy/' | relative_url }}). By using the Game, you consent to the data practices described in the Privacy Policy.
 
 # 2. License Grant
 

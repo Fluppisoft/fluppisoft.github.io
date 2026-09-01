@@ -1,30 +1,38 @@
 title: Fluppisoft
 description: >-
-  Welcome to Fluppisoft, an independent game developer from Bavaria.
+  Fluppisoft is the independent German developer and publisher of Brick Rigs, the creative physics sandbox game.
+lang: en
+logo: /assets/images/fluppisoft-logo.svg
 baseurl: ""
 url: "https://fluppisoft.com"
 
 theme: minima
 
 plugins:
-- jekyll-feed
+  - jekyll-feed
 
 minima:
   skin: dark
   social_links:
-  - { platform: instagram, title: Instagram, user_url: "https://instagram.fluppisoft.com/" }
-  - { platform: tiktok, title: TikTok, user_url: "https://www.tiktok.com/@fluppisoft" }
-  - { platform: youtube, title: YouTube, user_url: "https://www.youtube.com/@FluppisoftGmbH" }
+    - platform: instagram
+      title: Instagram
+      user_url: https://instagram.fluppisoft.com/
+    - platform: tiktok
+      title: TikTok
+      user_url: https://www.tiktok.com/@fluppisoft
+    - platform: youtube
+      title: YouTube
+      user_url: https://www.youtube.com/@FluppisoftGmbH
 
 header_pages:
-- index.md
-- brick-rigs/index.md
-- blog.md
-- imprint.md
+  - index.md
+  - brick-rigs/index.md
+  - blog.md
+  - imprint.md
 
 permalink: /blog/:title/
 
 exclude:
-- README.md
-- .gitignore
-- python/
+  - README.md
+  - .gitignore
+  - python/

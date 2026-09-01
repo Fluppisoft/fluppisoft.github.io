@@ -1,0 +1,28 @@
+steam:
+  store_url: https://store.steampowered.com/app/552100/Brick_Rigs/
+  utm_source: fluppisoft.com
+  utm_medium: website
+
+steam_reviews:
+  rating: Overwhelmingly Positive
+  positive: 95%
+  count: 59,000+
+  source: Steam reviews
+
+community:
+  discord_url: https://discord.brick-rigs.com/
+  bug_tracker_url: https://bugs.brick-rigs.com/
+
+screenshots:
+  - file: Editor.jpg
+    alt: A detailed vehicle in the Brick Rigs editor
+  - file: Offroading.jpg
+    alt: An off-road vehicle driving through the Brick Rigs landscape
+  - file: Helicopter.jpg
+    alt: A helicopter flying in Brick Rigs
+  - file: Crane.jpg
+    alt: A working crane built in Brick Rigs
+  - file: Ship.jpg
+    alt: A ship travelling through the water in Brick Rigs
+  - file: Tank.jpg
+    alt: A tank in Brick Rigs

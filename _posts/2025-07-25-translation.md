@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Brick Rigs AI/Community Translation"
-date:   2025-07-25 00:00:00 +0000
+title: "Brick Rigs AI/Community Translation"
+date: 2025-07-25 00:00:00 +0000
 category: brick-rigs
 ---
 For the longest time, Brick Rigs has only been available in English and German (the two languages I am somewhat comfortable with). Manually translating the game into more languages would have been time consuming and require constant rework when text is changed in an update. With todays availability of good AI tools however, we decided we could build a program which could automatically translate the game for us into as many languages as we needed.

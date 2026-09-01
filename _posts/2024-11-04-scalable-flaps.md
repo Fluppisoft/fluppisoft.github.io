@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Scalable Flaps - Brick Rigs Dev Blog #1"
-date:   2024-11-04 09:00:00 +0100
+title: "Scalable Flaps - Brick Rigs Dev Blog #1"
+date: 2024-11-04 09:00:00 +0100
 category: brick-rigs
 ---
 Welcome to the first written Brick Rigs development blog post. The goal behind this blog is to show some of the inner workings of Brick Rigs to the people who are interested in the more technical aspects of game development. In this post I will be showing you some of the complexities involved in making flap bricks scalable (they will come in update 1.8).

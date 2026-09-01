@@ -1,0 +1,7 @@
+{%- assign steam = site.data.brick_rigs.steam -%}
+<a
+  class="button button-primary"
+  href="{{ steam.store_url }}?utm_source={{ steam.utm_source | url_encode }}&amp;utm_medium={{ steam.utm_medium | url_encode }}&amp;utm_campaign={{ include.campaign | url_encode }}"
+>
+  {{ include.label | default: "Buy on Steam" }} <span aria-hidden="true">→</span>
+</a>

@@ -1,0 +1,5 @@
+{%- assign reviews = site.data.brick_rigs.steam_reviews -%}
+<div class="review-proof{% if include.compact %} compact{% endif %}" aria-label="Brick Rigs Steam review score">
+  <strong>{{ reviews.rating }}</strong>
+  <span>{{ reviews.positive }} positive · {{ reviews.count }} {{ reviews.source }}</span>
+</div>

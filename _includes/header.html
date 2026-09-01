@@ -28,7 +28,13 @@
         {%- elsif my_page.url != "/" and page.url contains my_page.url -%}
           {%- assign link_class = "page-link is-active" -%}
         {%- endif -%}
-        <a class="{{ link_class }}" href="{{ my_page.url | relative_url }}"{% if link_class contains "is-active" %} aria-current="page"{% endif %}>{{ my_page.title | escape }}</a>
+        <a
+          class="{{ link_class }}"
+          href="{{ my_page.url | relative_url }}"
+          {%- if link_class contains "is-active" %} aria-current="page"{% endif -%}
+        >
+          {{- my_page.nav_title | default: my_page.title | escape -}}
+        </a>
         {%- endif -%}
         {%- endfor -%}
       </div>

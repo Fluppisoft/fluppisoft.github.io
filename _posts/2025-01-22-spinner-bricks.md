@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Spinner Bricks - Brick Rigs Dev Blog #2"
-date:   2025-01-22 09:00:00 +0100
+title: "Spinner Bricks - Brick Rigs Dev Blog #2"
+date: 2025-01-22 09:00:00 +0100
 category: brick-rigs
 ---
 Welcome to the second Brick Rigs development blog post! This time I am going to show you how I implemented a pretty special new kind of scalable brick.
 
-It all began when I was looking for more brick types that could be made scalable and came across mudguards. With scalable wheels being a thing now, it makes sense that there should also be fitting mudguards for all wheel sizes. However, while looking at the existing mudguard models I quickly realized that their unique shapes would't work well with the kind of proportional scaling that scalables use. Then I thought, what if there were a better, more generalized solution to this problem? This is where the idea for spinner bricks was born. A brick that would enable arches with customizable shapes and sizes.
+It all began when I was looking for more brick types that could be made scalable and came across mudguards. With scalable wheels being a thing now, it makes sense that there should also be fitting mudguards for all wheel sizes. However, while looking at the existing mudguard models I quickly realized that their unique shapes wouldn't work well with the kind of proportional scaling that scalables use. Then I thought, what if there were a better, more generalized solution to this problem? This is where the idea for spinner bricks was born. A brick that would enable arches with customizable shapes and sizes.
 
 # Mesh Generation
 
-Unlike normal scalable bricks, I wasn't just going to be able to apply a scaling factor to a static mesh made in Blender. In order to be able to adjust the angle of the arch, I would have to generate the mesh at runtime. The first obvious method to do this in Unreal Engine 4 was to use the `UProdecuralMeshComponent`, since it allows the user to display a custom mesh with custom collision.
+Unlike normal scalable bricks, I wasn't just going to be able to apply a scaling factor to a static mesh made in Blender. In order to be able to adjust the angle of the arch, I would have to generate the mesh at runtime. The first obvious method to do this in Unreal Engine 4 was to use the `UProceduralMeshComponent`, since it allows the user to display a custom mesh with custom collision.
 
 On paper, generating the mesh isn't all that complicated. We can start with the vertices that make up the first 2D slice of the shape, then duplicate and rotate them around the pivot point a few times (visualizations done in Blender):
 

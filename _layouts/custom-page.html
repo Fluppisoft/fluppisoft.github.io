@@ -2,13 +2,15 @@
 layout: base
 ---
 <article class="page">
-
-
   {%- if page.banner -%}
   <div class="page-banner-frame">
-    <img src="{{ page.banner }}" class="page-banner" alt="{{ page.title | default: site.title | escape }}">
+    <img
+      class="page-banner"
+      src="{{ page.banner | relative_url }}"
+      alt="{{ page.title | default: site.title | escape }}"
+    >
   </div>
-  {%- else if page.title -%}
+  {%- elsif page.title and page.show_title != false -%}
   <header class="post-header">
     <h1 class="post-title">{{ page.title | escape }}</h1>
   </header>
@@ -17,5 +19,4 @@ layout: base
   <div class="page-content-body">
     {{ content }}
   </div>
-
 </article>

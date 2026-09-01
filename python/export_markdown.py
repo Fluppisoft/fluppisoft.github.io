@@ -1,25 +1,32 @@
+import re
+from pathlib import Path
+
 import fire
 from md2steam import markdown_to_steam_bbcode
-import os
 import pypandoc
-import re
 
 
-# Useful tool for exporting a markdown page or post to HTML or BBCode, which can be imported as a Steam announcement.
+SITE_URL = "https://fluppisoft.com"
+IMAGE_PATTERN = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
+
+
+def make_image_url_absolute(match: re.Match[str]) -> str:
+    """Convert root-relative Markdown image URLs to production URLs."""
+    alt_text, image_url = match.groups()
+    if image_url.startswith("/"):
+        image_url = f"{SITE_URL}{image_url}"
+    return f"![{alt_text}]({image_url})"
+
+
 def main(md_file: str, output_path: str, format: str):
-    # Load the markdown file
-    with open(md_file, "r", encoding="utf-8") as file:
-        content = file.read()
+    """Export a Jekyll Markdown file as HTML or Steam-compatible BBCode."""
+    content = Path(md_file).read_text(encoding="utf-8")
 
     # Remove front matter
     content = re.sub(r"^---\n.*?\n---\n", "", content, flags=re.DOTALL)
 
     # Convert image links to absolute URLs
-    pattern = re.compile(r"\!\[([^\\]*?)\]\(([^\)]+?)\)")
-    content = pattern.sub(
-        lambda match: f"![{match.group(1)}](https://fluppisoft.com{match.group(2)})",
-        content,
-    )
+    content = IMAGE_PATTERN.sub(make_image_url_absolute, content)
 
     if format.lower() == "bb":
         # Convert markdown to BBCode
@@ -37,9 +44,9 @@ def main(md_file: str, output_path: str, format: str):
         )
 
     # Write the output file
-    out_file = os.path.join(output_path, "output.txt")
-    with open(out_file, "w", encoding="utf-8") as file:
-        file.write(content)
+    output_directory = Path(output_path)
+    output_directory.mkdir(parents=True, exist_ok=True)
+    (output_directory / "output.txt").write_text(content, encoding="utf-8")
 
 
 if __name__ == "__main__":
