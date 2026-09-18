@@ -823,6 +823,82 @@ h2 {
   @include relative-font-size(2.25);
 }
 
+// Blog posts keep their source as portable Markdown for Steam export while
+// receiving a richer presentation on the website.
+.post.h-entry {
+  .post-content > p:first-child {
+    max-width: 68ch;
+    margin-bottom: 24px;
+    color: $title-color;
+    font-size: 1.08rem;
+    line-height: 1.72;
+  }
+
+  .post-content > blockquote:first-of-type {
+    margin: 0 0 42px;
+    padding: 16px 18px;
+    border-left: 4px solid $link-base-color;
+    border-radius: 0 14px 14px 0;
+    background: linear-gradient(135deg, rgba($brand-color, 0.26), rgba($brand-color, 0.08));
+    color: $text-color;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .post-content img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 28px auto 38px;
+    border: 1px solid rgba($text-color, 0.24);
+    border-radius: 8px;
+    background: rgba($background-color, 0.48);
+    box-shadow: 0 8px 42px rgba(0, 0, 0, 0.3);
+  }
+
+  .post-content h1,
+  .post-content h2,
+  .post-content h3 {
+    padding-bottom: 9px;
+    border-bottom: 1px solid rgba($text-color, 0.16);
+  }
+
+  .post-content h1 {
+    margin-top: 52px;
+  }
+
+  .post-content li {
+    padding-left: 4px;
+    margin-bottom: 7px;
+  }
+}
+
+@media (max-width: 520px) {
+  .post.h-entry {
+    .post-content > p:first-child {
+      font-size: 1rem;
+    }
+
+    .post-content > blockquote:first-of-type {
+      margin-bottom: 32px;
+      padding: 14px 15px;
+    }
+
+    .post-content img {
+      margin: 22px auto 32px;
+      border-radius: 12px;
+    }
+
+    .post-content h1 {
+      margin-top: 42px;
+    }
+  }
+}
+
 // Custom styles
 
 // Shared surface treatment for the banner frame, feature cards, news previews,
