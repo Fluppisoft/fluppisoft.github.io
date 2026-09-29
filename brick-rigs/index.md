@@ -141,7 +141,7 @@ show_title: false
   <div class="support-links">
     <a href="{{ '/blog/' | relative_url }}">Read development updates</a>
     <a href="{{ brick_rigs.community.discord_url }}">Join Discord</a>
-    <a href="{{ brick_rigs.community.bug_tracker_url }}">Report a bug</a>
+    <a href="{{ brick_rigs.community.feedback_url }}">Feedback hub</a>
   </div>
 </section>
 
