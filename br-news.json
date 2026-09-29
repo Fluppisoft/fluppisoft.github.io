@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /br-news.json
+---
+
+[
+{% for post in site.categories["brick-rigs"] limit: 10 %}
+  {% assign preview_image = post.preview_image | default: post.image %}
+  {% assign summary = post.summary %}
+  {% unless summary %}
+    {% assign summary = post.content | markdownify | strip_html | normalize_whitespace | strip | truncate: 150, "..." %}
+  {% endunless %}
+  {
+    "title": {{ post.title | jsonify }},
+    "summary": {{ summary | jsonify }},
+    "url": {{ post.url | absolute_url | jsonify }},
+    "date": {{ post.date | date_to_xmlschema | jsonify }},
+    "preview_image": {% if preview_image %}{{ preview_image | absolute_url | jsonify }}{% else %}null{% endif %}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
